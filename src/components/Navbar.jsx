@@ -8,7 +8,7 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="flex items-center justify-between p-6 shadow-lg">
+        <nav className="flex items-center justify-between p-6 shadow-lg bg-transparent">
             <Link href="/" className='block mt-4 md:inline-block md:mt-0   mr-4'>
                 ENTHUB
             </Link>
