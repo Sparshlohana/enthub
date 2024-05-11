@@ -19,7 +19,7 @@ export default function Page({ params }) {
             )}
             <iframe
                 className={`h-[500px] md:w-1/2 ${iframeLoaded ? 'block' : 'hidden'}`}
-                src={`https://vidsrc.to/embed/tv/${params.slug}`}
+                src={`https://vidsrc.in/embed/tv?tmdb=${params.slug}`}
                 frameborder="0"
                 allowFullScreen
                 onLoad={handleIframeLoad}
