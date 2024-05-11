@@ -16,7 +16,7 @@ export default function Home() {
 
   const getMovies = async () => {
     try {
-      const response = await axios.get(`/api/movies?page=${page}&category=${"bollywood"}`);
+      const response = await axios.get(`/api/movies?page=${page}`);
       setMovies(response.data.results);
     } catch (error) {
       console.log(error.message);

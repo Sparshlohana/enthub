@@ -8,19 +8,19 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="flex items-center justify-between p-6 shadow-lg bg-transparent">
+        <nav className="flex items-center justify-between p-6 shadow-lg bg-transparent relative">
             <Link href="/" className='block mt-4 md:inline-block md:mt-0   mr-4'>
                 ENTHUB
             </Link>
-            <div className="md:hidden">
+            <div className="md:hidden absolute right-5">
                 {isOpen ? (
                     <CrossIcon onClick={() => {
                         setIsOpen(false);
-                    }} className="w-6 fill-white" />
+                    }} className="w-5 fill-[#000000b0]" />
                 ) : (
                     <ThreeLines onClick={() => {
                         setIsOpen(true);
-                    }} className="w-6 fill-white" />
+                    }} className="w-6 fill-black" />
 
                 )}
 
@@ -33,7 +33,10 @@ const Navbar = () => {
                     <Link href="/about" className='block mt-4 md:inline-block md:mt-0   mr-4'>
                         About
                     </Link>
-                    {/* Add more links as needed */}
+                    <Link href="/web-series" className='block mt-4 md:inline-block md:mt-0   mr-4'>
+                        Web Series
+                    </Link>
+                    
                 </div>
             </div>
         </nav>
