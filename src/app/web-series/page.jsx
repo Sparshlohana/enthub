@@ -56,7 +56,7 @@ const Page = () => {
                         </button>
                     </form>
                 </div>
-                <h1 className="text-center p-5 font-bold text-3xl underline drop-shadow-md">Popular Series</h1>
+                <h1 className="text-center p-5 font-bold text-3xl underline">Popular Series</h1>
                 <div className="flex flex-wrap gap-10 justify-center items-center">
                     {movies.map((movie) => (
                         <SeriesCards key={movie?.id} webSeries={movie} />
@@ -69,7 +69,7 @@ const Page = () => {
                 <div className="my-10 flex justify-center  items-center">
                     <button onClick={() => {
                         setPage(page - 1);
-                    }} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    }} className="bg-blue-500 transition-all transi hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                         Prev
                     </button>
                     <span className="font-bold text-lg py-2 px-4 rounded">
@@ -77,7 +77,7 @@ const Page = () => {
                     </span>
                     <button onClick={() => {
                         setPage(page + 1);
-                    }} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    }} className="bg-blue-500 transition-all transi hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                         Next
                     </button>
                 </div>

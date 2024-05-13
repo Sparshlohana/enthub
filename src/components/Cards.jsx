@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Cards = ({ movie }) => {
     return (
-        <Link href={`/movie/${movie.id}`} className='w-[300px] h-fit flex flex-col justify-center items-center shadow-md rounded-md'>
+        <Link href={`/movie/${movie.id}?title=${movie.title}`} className='w-[300px] h-fit flex flex-col justify-center items-center shadow-md rounded-md bg-white'>
             <img
                 className="w-[300px] object-cover rounded-md"
                 src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
