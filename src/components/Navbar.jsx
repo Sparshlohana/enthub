@@ -7,6 +7,11 @@ import { CrossIcon, ThreeLines } from './Icons';
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
+    // Function to close the navbar
+    const closeNavbar = () => {
+        setIsOpen(false);
+    };
+
     return (
         <nav className="flex items-center justify-between p-6 shadow-lg bg-transparent relative">
             <Link href="/" className='block mt-4 md:inline-block md:mt-0   mr-4'>
@@ -21,22 +26,19 @@ const Navbar = () => {
                     <ThreeLines onClick={() => {
                         setIsOpen(true);
                     }} className="w-6 fill-black" />
-
                 )}
-
             </div>
             <div className={`${isOpen ? 'block' : 'hidden'} md:flex md:items-center md:w-auto`}>
                 <div className="text-sm">
-                    <Link href="/" className='block mt-4 md:inline-block md:mt-0   mr-4'>
+                    <Link href="/" className='block mt-4 md:inline-block md:mt-0   mr-4' onClick={closeNavbar}>
                         Home
                     </Link>
-                    <Link href="/about" className='block mt-4 md:inline-block md:mt-0   mr-4'>
+                    <Link href="/about" className='block mt-4 md:inline-block md:mt-0   mr-4' onClick={closeNavbar}>
                         About
                     </Link>
-                    <Link href="/web-series" className='block mt-4 md:inline-block md:mt-0   mr-4'>
+                    <Link href="/web-series" className='block mt-4 md:inline-block md:mt-0   mr-4' onClick={closeNavbar}>
                         Web Series
                     </Link>
-                    
                 </div>
             </div>
         </nav>

@@ -68,7 +68,7 @@ const Page = () => {
             {displayButton && <>
                 <div className="my-10 flex justify-center  items-center">
                     <button onClick={() => {
-                        setPage(page - 1);
+                        setPage(Math.max(page - 1, 1));
                     }} className="bg-blue-500 transition-all transi hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                         Prev
                     </button>
